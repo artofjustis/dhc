@@ -1,0 +1,180 @@
+/*
+ Theme Name:   Storefront Child
+ Theme URI:    http://example.com/storefront-child/
+ Description:  Storefront Child Theme
+ Author:       Michael Robinson
+ Author URI:   http://example.com
+ Template:     storefront
+ Version:      1.0.0
+ License:      GNU General Public License v2 or later
+ License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+ Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
+ Text Domain:  storefront-child
+*/
+
+body {
+    font-size: 16px;
+}
+
+#masthead {
+    background: white;
+    height: 96px;
+    border-bottom: 1px solid rgba(0,0,0,.2);
+    padding-top: 10px;
+    /*margin-bottom: -5px;*/
+    position: fixed;
+    width:100%;
+}
+#masthead > .col-full {
+    height: 0!important;
+}
+
+.site-branding>a>img {
+    width: 240px!important;
+    height: 80px!important;
+}
+
+.storefront-primary-navigation {
+    display: none;
+}
+
+.secondary-navigation {
+    float: right!important;
+    margin-top: 15px!important;
+}
+.secondary-navigation>div>ul>li>a {
+    color: #629dd1!important;
+    font-size: 1.6em;
+    font-weight: bold!important;
+    padding: 10px 20px!important;
+    margin-right: 20px!important;
+}
+.secondary-navigation>div>ul>li:before,
+.secondary-navigation>div>ul>li:after,
+.secondary-navigation>div>ul>li>a:before,
+.secondary-navigation>div>ul>li>a:after {
+    display:none!important;
+}
+#menu-item-32 > a {
+    transition: all .2s ease;
+}
+#menu-item-32 > a:hover {
+    color: black!important;
+}
+#menu-item-31 > a {
+    background: #629dd1!important;
+    color: white!important;
+    border-radius: 5px;
+    margin-right: 0!important;
+    transition: all .2s ease;
+}
+#menu-item-31 > a:hover {
+    background: #76A9D7!important;
+}
+
+.entry-header {
+    display: none;
+}
+
+/* Home Page */
+body.home #primary.content-area {
+    display: none;
+}
+
+/* Hero Image */
+#banner {
+    height: 600px;
+    margin-top: 40px;
+}
+.hero {
+    background: url("/wp-content/uploads/2016/06/doggy_cover.png") no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+/* Front Page Sections */
+#one,
+#two,
+#three {
+    margin: 4em 0;
+}
+header.major {
+    text-align: center;
+    margin: 4em 0 2em;
+}
+.section-heading {
+    color: #666f77;
+    font-size: 2em;
+    line-height: 2em;
+}
+.box {
+    padding: 3em 2em;
+}
+.special.box img {
+    display: block;
+    width:275px;
+    margin: 0 auto 1em;
+}
+.special.box h3,
+.special.box p {
+    text-align: center;
+    color: #666f77;
+}
+
+#two {
+    height: 510px;
+    overflow: hidden;
+}
+#two .hero {
+    background: url('/wp-content/themes/storefront-child/images/whatsinside_bg.png') no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.inner {
+    left: 15px;
+    width: 30%;
+    margin: 150px 0 0 5%;
+    position: absolute;
+    text-align: left;
+    color: white;
+}
+.inner h3 {
+    color: white;
+}
+.inside-box  {
+    height: 100%;
+    width: 40%;
+    position: absolute;
+    left: 40%;
+}
+
+#three {
+    margin-bottom: 8em;
+}
+#three .special p {
+    font-size: 1.3em;
+    text-align: center;
+}
+
+/* Footer */
+footer#colophon {
+    background: #F8F8F8;
+    padding: 6em 0 2em;
+}
+.footer-navigation {
+    margin-bottom: 3em;
+}
+.footer-link a,
+.footer-link span {
+    font-size: 1.3rem;
+    color: #666f77!important;
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+.footer-link {
+    border-right: 1px solid rgba(0,0,0,.2);
+}
+.footer-link:nth-of-type(4) {
+    border-right: none!important;
+}
