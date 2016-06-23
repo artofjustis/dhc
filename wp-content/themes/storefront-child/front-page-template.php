@@ -5,6 +5,21 @@ get_header('front-page-template'); ?>
 
     <section id="banner">
         <div class="hero">
+            <div class="container hero-text">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <h2>A MONTHLY BOX OF HEALTHY GOODIES</h2>
+                        <div class="row">
+                            <div class="col-sm-3"></div>
+                            <div class="col-sm-6">
+                                <a href="#">GET A BOX</a>
+                            </div>
+                            <div class="col-sm-3"></div>
+                        </div>
+                    </div>
+                    <div class="col-sm-8"></div>
+                </div>
+            </div>
         </div>
     </section>
 
