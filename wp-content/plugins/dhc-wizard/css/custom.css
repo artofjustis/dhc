@@ -1,0 +1,22 @@
+/**
+ * DHC Custom CSS
+ */
+.dhc-wizard .container {
+	max-width: 100%;
+}
+.dhc-wizard .img-option-button {
+	cursor: pointer;
+}
+.dhc-wizard .img-option-button:hover {
+	background-color: #c8b89a;
+}
+.dhc-wizard .img-option-button.selected {
+	background-color: #9c867a;
+}
+.dhc-wizard .upgrade-image img {
+	margin:15px 0;
+}
+.dhc-wizard .upgrade-box {
+	text-align:center;
+}
+
