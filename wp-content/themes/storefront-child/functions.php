@@ -40,18 +40,45 @@ function custom_storefront_credit() {
     ?>
     <div class="container footer-navigation">
         <div class="row">
-            <div class="col-sm-3"></div>
-            <div class="col-sm-2 footer-link">
-                <a href="/terms-and-conditions">Terms and Conditions</a>
+            <div class="col-sm-2">
+                <h4>JOIN THE CLUB</h4>
+                <ul>
+                    <li><a href="#">Get A Box</a></li>
+                    <li><a href="#">Gift A Box</a></li>
+                </ul>
             </div>
             <div class="col-sm-2 footer-link">
-                <a href="/privacy-policy">Privacy Policy</a>
+                <h4>HELP</h4>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
             </div>
             <div class="col-sm-2 footer-link">
-                <span>&copy; <?php echo get_bloginfo( 'name' ) . ' ' . get_the_date( 'Y' ); ?></span>
+                <h4>MORE</h4>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms &amp; Conditions</a></li>
+                </ul>
             </div>
-            <div class="col-sm-3"></div>
+            <div class="col-sm-2 footer-link">
+                <h4>ACCOUNT</h4>
+                <ul>
+                    <li><a href="#">Login</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <h4>KEEP IN TOUCH</h4>
+                <input type="email"><br>
+                <input type="submit" value="Submit">
+            </div>
         </div>
     </div>
     <?php
+}
+
+// Load Font Awesome
+add_action( 'wp_enqueue_scripts', 'enqueue_font_awesome' );
+function enqueue_font_awesome() {
+    wp_enqueue_style( 'font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css' );
 }
