@@ -109,7 +109,6 @@ class Plugin
 		{
 			if ( $post->ID == $this->getSettings()->getSetting( 'box_product' ) )
 			{
-				remove_action( 'woocommerce_sidebar', 'woocommerce_get_sidebar', 10 );
 				return $this->pluginFile( 'template/product', 'php' );
 			}
 		}
