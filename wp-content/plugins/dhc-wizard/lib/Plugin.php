@@ -109,6 +109,7 @@ class Plugin
 		{
 			if ( $post->ID == $this->getSettings()->getSetting( 'box_product' ) )
 			{
+				remove_action( 'woocommerce_sidebar', 'woocommerce_get_sidebar', 10 );
 				return $this->pluginFile( 'template/product', 'php' );
 			}
 		}
@@ -127,13 +128,35 @@ class Plugin
 		{
 			case 'clear':
 				
-				WC()->cart->empty_cart();
+				$wc = WC();
+				$wc->cart->empty_cart();
+				$checkout = $wc->cart->get_checkout_url();
+				
 				wp_send_json( array
 				(
-					'checkout' => WC()->cart->get_checkout_url(),
+					'nextstep' => is_user_logged_in() ? $checkout : get_permalink( get_option( 'woocommerce_myaccount_page_id' ) ),
 				));
 				break;
 		}
+	}
+	
+	/**
+	 * Login Handler
+	 *
+	 * @return	void
+	 */
+	public function loginHandler( $redirect )
+	{
+		if ( function_exists( 'WC' ) )
+		{
+			$wc = WC();
+			if ( $wc->cart->get_cart_contents_count() )
+			{
+				return $wc->cart->get_checkout_url();
+			}
+		}
+		
+		return $redirect;
 	}
 	
 	/**

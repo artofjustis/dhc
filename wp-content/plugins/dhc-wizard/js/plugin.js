@@ -13,6 +13,8 @@
 	
 	/* Plugin Localization */
 	var local = window.dhclocal;
+	var wizard = $('#dhc-wizard-container');
+	var form = $('.product-form-container form');
 
 	/* Steps Configuration */
 	var stepsConfig = 
@@ -21,12 +23,14 @@
 		bodyTag: 'section',
 		transitionEffect: 'slideLeft',
 		titleTemplate: '#title#',
-		enablePagination: false
+		enablePagination: false,
+		onInit: function() {
+			wizard.css({ visibility: 'visible' });
+		}
 	};
 	
-	var wizard = $('#dhc-wizard-container');
-	var form = $('.product-form-container form');
-	var res = wizard.steps( stepsConfig );
+	/* Init wizard */
+	wizard.steps( stepsConfig );
 	
 	wizard.on( 'click', '[data-role="option-button"]', function( e ) 
 	{
@@ -38,7 +42,7 @@
 			var select = form.find('.variations select').eq( button.data('attribute') );
 			var option = select.find( 'option' ).eq( button.data('option') );			
 			select.val( option.val() );
-			button.closest( 'section' ).find( '[data-role="option-button"]' ).removeClass( 'selected' );
+			button.closest( '.option-group' ).find( '[data-role="option-button"]' ).removeClass( 'selected' );
 			button.addClass( 'selected' );
 		}
 		
@@ -89,8 +93,8 @@
 							data: form.serialize(),
 							success: function()
 							{
-								/* Redirect to checkout */
-								window.location = data.checkout;
+								/* Redirect to next step */
+								window.location = data.nextstep;
 							}
 						});
 					}
