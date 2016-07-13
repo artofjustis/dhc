@@ -32,11 +32,11 @@ wp_enqueue_style( 'dhc-custom-css', $plugin->fileUrl( 'css/custom.css' ) );
 
 <div itemscope itemtype="<?php echo woocommerce_get_product_schema(); ?>" id="product-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-    <div id="dhc-wizard-container" class="dhc-wizard">
+    <div id="dhc-wizard-container" class="dhc-wizard" style="visibility:hidden">
     
         <h3>Size</h3>
         <section>
-	    <div class="container">
+	    <div class="container option-group">
 	        <div class="row">
 		    <div class="col-md-4">
 		        <img 
@@ -64,7 +64,7 @@ wp_enqueue_style( 'dhc-custom-css', $plugin->fileUrl( 'css/custom.css' ) );
         </section>
         <h3>Personality</h3>
         <section>
-	    <div class="container">
+	    <div class="container option-group">
 	        <div class="row">
 		    <div class="col-md-4">
 		        <img 
@@ -95,7 +95,8 @@ wp_enqueue_style( 'dhc-custom-css', $plugin->fileUrl( 'css/custom.css' ) );
         </section>
         <h3>Upgrades</h3>
         <section>
-            <div class="container" id="upgrade-calm">
+	    <div class="option-group">
+              <div class="container" id="upgrade-calm">
 	        <div class="row">
 		    <div class="col-md-6 upgrade-image">
 		        <img src="<?php echo $plugin->fileUrl( 'img/dhc-upgrade-calm.png' ); ?>" />
@@ -111,8 +112,8 @@ wp_enqueue_style( 'dhc-custom-css', $plugin->fileUrl( 'css/custom.css' ) );
 			</div>
 		    </div>
 		</div>
-	    </div>
-            <div class="container" id="upgrade-wild">
+	      </div>
+              <div class="container" id="upgrade-wild">
 	        <div class="row">
 		    <div class="col-md-6 upgrade-image">
 		        <img src="<?php echo $plugin->fileUrl( 'img/dhc-upgrade-wild.png' ); ?>" />
@@ -128,8 +129,8 @@ wp_enqueue_style( 'dhc-custom-css', $plugin->fileUrl( 'css/custom.css' ) );
 			</div>
 		    </div>
 		</div>
-	    </div>
-            <div class="container" id="upgrade-old">
+	      </div>
+              <div class="container" id="upgrade-old">
 	        <div class="row">
 		    <div class="col-md-6 upgrade-image">
 		        <img src="<?php echo $plugin->fileUrl( 'img/dhc-upgrade-old.png' ); ?>" />
@@ -145,8 +146,9 @@ wp_enqueue_style( 'dhc-custom-css', $plugin->fileUrl( 'css/custom.css' ) );
 			</div>
 		    </div>
 		</div>
+	      </div>
 	    </div>
-            <div class="container" id="upgrade-bullystick">
+            <div class="container option-group" id="upgrade-bullystick">
 	        <div class="row">
 		    <div class="col-md-6 upgrade-image">
 		        <img src="<?php echo $plugin->fileUrl( 'img/dhc-upgrade-bullystick.png' ); ?>" />
@@ -229,7 +231,7 @@ wp_enqueue_style( 'dhc-custom-css', $plugin->fileUrl( 'css/custom.css' ) );
 		 * @hooked woocommerce_upsell_display - 15
 		 * @hooked woocommerce_output_related_products - 20
 		 */
-		do_action( 'woocommerce_after_single_product_summary' );
+		//do_action( 'woocommerce_after_single_product_summary' );
 	?>
 
 	<meta itemprop="url" content="<?php the_permalink(); ?>" />
