@@ -87,3 +87,13 @@ function woo_remove_product_tabs( $tabs ) {
 
     return $tabs;
 }
+
+add_filter('body_class', 'adjust_body_class', 20);
+function adjust_body_class($wp_classes) {
+
+    foreach($wp_classes as $key => $value) {
+        if ($value == 'right-sidebar') unset($wp_classes[$key]);
+    }
+
+    return $wp_classes;
+}

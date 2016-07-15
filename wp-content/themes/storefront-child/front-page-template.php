@@ -34,21 +34,21 @@ get_header('front-page-template'); ?>
             <div class="row">
                 <div class="col-sm-4">
                     <section class="special box">
-                        <img src='/wp-content/themes/storefront-child/images/doggy_size.png' alt="Size Dogs">
+                        <img src='<?php echo site_url(); ?>/wp-content/themes/storefront-child/images/doggy_size.png' alt="Size Dogs">
                         <h3>DOGGY SIZE</h3>
                         <p>Tell us the size of your dog. We've got healthy premium treats for dogs of every size.</p>
                     </section>
                 </div>
                 <div class="col-sm-4">
                     <section class="special box">
-                        <img src='/wp-content/themes/storefront-child/images/doggy_personality.png' alt="Box Gift">
+                        <img src='<?php echo site_url(); ?>/wp-content/themes/storefront-child/images/doggy_personality.png' alt="Box Gift">
                         <h3>DOGGY'S PERSONALITY</h3>
                         <p>Describe your dog to us. We create the perfect box for all doggy personalities.</p>
                     </section>
                 </div>
                 <div class="col-sm-4">
                     <section class="special box">
-                        <img src='/wp-content/themes/storefront-child/images/doggy_mail.png' alt="Doggy Mail">
+                        <img src='<?php echo site_url(); ?>/wp-content/themes/storefront-child/images/doggy_mail.png' alt="Doggy Mail">
                         <h3>DOGGY MAIL</h3>
                         <p>Each month we will deliver your box directly to your doorstep.</p>
                     </section>
@@ -66,11 +66,11 @@ get_header('front-page-template'); ?>
                     products not found anywhere else. We guarantee your doggy will love them.</p>
             </div>
             <div class="inside-box col-sm-4">
-                <img src="/wp-content/themes/storefront-child/images/deliverydog.png" alt="Delivery Dog">
+                <img src="<?php echo site_url(); ?>/wp-content/themes/storefront-child/images/deliverydog.png" alt="Delivery Dog">
             </div>
             <div class="col-sm-3"></div>
             <div class="col-sm-1">
-                <a href="contact"><img src="/wp-content/themes/storefront-child/images/leave-a-message.png" alt="Leave a message" id="leave-a-message"></a>
+                <a href="contact"><img src="<?php echo site_url(); ?>/wp-content/themes/storefront-child/images/leave-a-message.png" alt="Leave a message" id="leave-a-message"></a>
             </div>
         </div>
     </section>
@@ -94,7 +94,7 @@ get_header('front-page-template'); ?>
         <div class="container">
             <div class="row flex-container">
                 <div class="col-sm-4">
-                    <img src="/wp-content/themes/storefront-child/images/satisfaction-guaranteed.png" alt="Satisfaction Guaranteed">
+                    <img src="<?php echo site_url(); ?>/wp-content/themes/storefront-child/images/satisfaction-guaranteed.png" alt="Satisfaction Guaranteed">
                 </div>
                 <div class="col-sm-8">
                     <h2>DHC GUARANTEE</h2>
@@ -123,7 +123,7 @@ get_header('front-page-template'); ?>
                                 <a href="#"><i class="fa fa-heart"></i>&nbsp;MORE INFO</a>
                             </div>
                             <div class="col-sm-2">
-                                <img src="/wp-content/themes/storefront-child/images/humane-society.png" alt="Humane Society Logo">
+                                <img src="<?php echo site_url(); ?>/wp-content/themes/storefront-child/images/humane-society.png" alt="Humane Society Logo">
                             </div>
                         </div>
                     </div>

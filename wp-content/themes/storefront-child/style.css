@@ -403,3 +403,9 @@ footer#colophon [type="submit"] {
     border-radius: 50%;
     font-size: 4rem;
 }
+
+@media (min-width: 768px) {
+    .content-area {
+        width:100%;
+    }
+}
