@@ -39,9 +39,10 @@
 		/* Select attribute options targeted by this button */
 		if ( button.data('attribute') !== undefined )
 		{
-			var select = form.find('.variations select').eq( button.data('attribute') );
-			var option = select.find( 'option' ).eq( button.data('option') );			
+			var select = form.find('.variations select').eq( parseInt( button.data('attribute') ) );
+			var option = select.find( 'option' ).eq( parseInt( button.data('option') ) );
 			select.val( option.val() );
+			select.change();
 			button.closest( '.option-group' ).find( '[data-role="option-button"]' ).removeClass( 'selected' );
 			button.addClass( 'selected' );
 		}
