@@ -28,6 +28,7 @@ Thumbs.db
 *.tar
 *.zip
 wp-content/*
+wp-content/plugins/*
 !wp-content/mu-plugins/
 !wp-content/themes/
 !wp-content/plugins/
