@@ -17,6 +17,10 @@ body {
     background: #d1c4ab;
 }
 
+body, h1, h2, h3, h4, h5, h6 {
+    color: #281e1b;
+}
+
 #masthead {
     background-image: url('images/header-bg.jpg')!important;
     background-position: 0 0;
@@ -102,9 +106,9 @@ body.home #primary.content-area {
 
 /* Hero Image */
 #banner {
-    height: 400px;
     margin-top: 110px;
     margin-bottom: 0;
+    border-bottom: 16px solid rgb(0,43,17);
 }
 .hero {
     background: #464646;
@@ -176,10 +180,6 @@ header.major {
     margin: 0 auto;
 }
 
-#one {
-    border-top: 16px solid rgb(0,43,17);
-    margin-top: 0;
-}
 #one .section-heading {
     color: #281e1b;
 }
@@ -254,15 +254,18 @@ header.major {
 .rslides_nav {
     width: 50px;
     position: absolute;
-    background: #decba6;
     transform: translateY(50%);
 }
 .rslides_nav.prev {
+    background-image: url('images/slider-left.png');
+    background-size: contain;
     left: -70px;
     -webkit-clip-path: polygon(0 50%, 100% 0, 100% 100%, 0 50%);
     clip-path: polygon(0 50%, 100% 0, 100% 100%, 0 50%);
 }
 .rslides_nav.next {
+    background-image: url('images/slider-right.png');
+    background-size: contain;
     right: -70px;
     -webkit-clip-path: polygon(0 0, 100% 50%, 100% 50%, 0 100%);
     clip-path: polygon(0 0, 100% 50%, 100% 50%, 0 100%);
@@ -282,7 +285,7 @@ header.major {
 
 #five {
     position: relative;
-    background: url('/wp-content/themes/storefront-child/images/dhc-gives-back-bg.jpg') no-repeat 50% 50%;
+    background: url('images/dhc-gives-back-bg.png') no-repeat 50% 50%;
     background-size: 100%;
     height: 600px;
     border-bottom: 16px solid rgb(0,43,17);
@@ -402,4 +405,131 @@ footer#colophon [type="submit"] {
     padding: 12px 10px 10px;
     border-radius: 50%;
     font-size: 4rem;
+}
+
+@media (min-width: 768px) {
+    .content-area {
+        width:100%;
+    }
+}
+
+/* Page: Learn More */
+
+#page-learn .hero {
+    background-image: url('images/learn/dhc-learn-bg.png');
+    background-repeat: no-repeat;
+    background-color: #decba6;
+    background-position: center;
+}
+
+#page-learn .row img {
+    margin: 10px 0;
+    display: inline;
+}
+
+#page-learn .img-grid-row {
+    max-width: 485px;
+}
+
+/* Page: Charity */
+
+#page-charity .hero {
+    background-image: url('images/charity/dhc-charity-bg.png');
+    background-repeat: no-repeat;
+    background-color: #decba6;
+    background-position: center;
+
+}
+
+/* UI Elements */
+
+.dhc-button {
+    display: inline-block;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.2em;
+    font-weight: bold;
+    background: url('images/header-bg.jpg');
+    color: #24442b;
+    padding: 8px 30px;
+    border-radius: 5px;
+    outline-color: transparent;
+    position:relative;
+}
+
+.dhc-button:hover {
+    color: #335f3b;
+}
+
+.dhc-button:active {
+    top: 1px;
+    left: 1px;
+}
+
+.dhc-button:focus,
+.dhc-button:active {
+    outline-color: transparent;
+}
+
+.dhc-join-wrap {
+    margin-top:20px; 
+    padding-top:20px; 
+    border-top: 1px solid #281e1b; 
+    max-width: 360px;
+}
+
+/* Content Styles */
+
+.heroTitle {
+    display: inline-block;
+    margin-top: 50px;
+    color: #281e1b;
+    padding: 16px 45px;
+    border-radius:5px;
+    border:2px solid #281e1b;
+}
+
+.padSection {
+    padding: 50px 0px;
+}
+
+.dhcImportantText {
+    color: #24442b;
+    font-size: 1.5em;
+    line-height: 1.2em;
+}
+
+.bg-brown {
+    background-color: #281e1b;
+}
+
+ul.arrow-list {
+    list-style: none;
+    margin: 0;
+}
+
+ul.arrow-list li {
+    background: transparent url('images/ul-arrow.png') no-repeat scroll 0px 5px;
+    padding-left: 35px;
+}
+
+.icon-paw {
+    background: transparent url('images/icon-paw.png') no-repeat scroll 0 0;
+    background-size: contain;
+    width: 14px;
+    height: 14px;
+    display: inline-block;
+}
+
+.icon-gift {
+    background: transparent url('images/icon-gift.png') no-repeat scroll 0 0;
+    background-size: contain;
+    width: 14px;
+    height: 14px;
+    display: inline-block;
+}
+
+/* WooCommerce Overrides */
+.woocommerce-breadcrumb {
+    display:none;
 }
