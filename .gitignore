@@ -28,8 +28,13 @@ Thumbs.db
 *.tar
 *.zip
 wp-content/*
+wp-content/plugins/*
 !wp-content/mu-plugins/
 !wp-content/themes/
+!wp-content/plugins/
+!wp-content/plugins/dhc-order/
+wp-content/plugins/woo*
+wp-content/plugins/*.*
 wp-content/themes/storefront
 wp-content/themes/twenty*/
 node_modules/
