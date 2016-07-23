@@ -21,6 +21,10 @@ body, h1, h2, h3, h4, h5, h6 {
     color: #281e1b;
 }
 
+.site-content {
+    padding-top: 150px;
+}
+
 #masthead {
     background-image: url('images/header-bg.jpg')!important;
     background-position: 0 0;
