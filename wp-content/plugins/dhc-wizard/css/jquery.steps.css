@@ -380,3 +380,18 @@
 {
     display: list-item;
 }
+
+/* Mobile Fixes */
+@media (max-width:991px){
+    div.wizard > .content > .body {
+        position: static;
+    }
+
+    div.wizard > .content > .body img.img-option-button {
+        margin-bottom: 40px;
+    }
+
+    div.wizard > .steps > ul > li {
+        width: 50%;
+    }
+}

@@ -78,11 +78,11 @@ body, h1, h2, h3, h4, h5, h6 {
 .secondary-navigation>div>ul>li>a:hover {
     color: black!important;
 }
-#menu-item-31 {
+header#masthead nav.secondary-navigation li:last-child {
     position: relative;
     right: -2%;
 }
-#menu-item-31 > a {
+header#masthead nav.secondary-navigation li:last-child > a {
     text-transform: uppercase;
     font-weight: bold!important;
     background: url('images/header-bg.jpg')!important;
@@ -92,7 +92,7 @@ body, h1, h2, h3, h4, h5, h6 {
     font-size: 1.6em;
     transition: all .3s ease;
 }
-#menu-item-31 > a:hover {
+header#masthead nav.secondary-navigation li:last-child > a:hover {
     color: black!important;
 }
 .menu > .current-menu-item > a {
@@ -536,4 +536,34 @@ ul.arrow-list li {
 /* WooCommerce Overrides */
 .woocommerce-breadcrumb {
     display:none;
+}
+
+/* Shiftnav Updates */
+.shiftnav-wrap {
+    padding-top: 0px !important;
+}
+
+div#shiftnav-toggle-main {
+    background: transparent;
+}
+
+#shiftnav-toggle-main .shiftnav-toggle-burger {
+    float: right;
+    font-size: 30px;
+    padding: 30px 20px;
+    color: #002b11;
+}
+
+#shiftnav-toggle-main.shiftnav-toggle-main-align-center .shiftnav-main-toggle-content {
+    display: none;
+}
+
+@media (max-width:1199px) {
+    nav.secondary-navigation {
+        width: 72% !important;
+    }
+
+    nav.secondary-navigation > div > ul > li > a {
+        padding: 10px 15px !important;
+    }
 }

@@ -106,8 +106,8 @@ wp_enqueue_style( 'dhc-custom-css', $plugin->fileUrl( 'css/custom.css' ) );
 			<p>Keep 'em moving with an extra, premium toy in each month's box for just $7.99</p>
 			<div class="container">
 			    <div class="row">
-			        <div class="col-sm-6"><button data-role="option-button" data-attribute="2" data-option="2" data-hide="upgrade-calm" data-show="upgrade-bullystick">Please Add</button></div>
-				<div class="col-sm-6"><button data-role="option-button" data-attribute="2" data-option="1" data-hide="upgrade-calm" data-show="upgrade-bullystick">No Thanks</button></div>
+			        <div class="col-xs-6"><button data-role="option-button" data-attribute="2" data-option="2" data-hide="upgrade-calm" data-show="upgrade-bullystick">Please Add</button></div>
+				<div class="col-xs-6"><button data-role="option-button" data-attribute="2" data-option="1" data-hide="upgrade-calm" data-show="upgrade-bullystick">No Thanks</button></div>
 			    </div>
 			</div>
 		    </div>
@@ -123,8 +123,8 @@ wp_enqueue_style( 'dhc-custom-css', $plugin->fileUrl( 'css/custom.css' ) );
 			<p>Keep 'em playing with an extra, premium toy in each month's box for just $7.99</p>
 			<div class="container">
 			    <div class="row">
-			        <div class="col-sm-6"><button data-role="option-button" data-attribute="2" data-option="2" data-hide="upgrade-wild" data-show="upgrade-bullystick">Please Add</button></div>
-				<div class="col-sm-6"><button data-role="option-button" data-attribute="2" data-option="1" data-hide="upgrade-wild" data-show="upgrade-bullystick">No Thanks</button></div>
+			        <div class="col-xs-6"><button data-role="option-button" data-attribute="2" data-option="2" data-hide="upgrade-wild" data-show="upgrade-bullystick">Please Add</button></div>
+				<div class="col-xs-6"><button data-role="option-button" data-attribute="2" data-option="1" data-hide="upgrade-wild" data-show="upgrade-bullystick">No Thanks</button></div>
 			    </div>
 			</div>
 		    </div>
@@ -140,8 +140,8 @@ wp_enqueue_style( 'dhc-custom-css', $plugin->fileUrl( 'css/custom.css' ) );
 			<p>Keep 'em playing like a puppy with an extra, premium toy in each month's box for just $7.99</p>
 			<div class="container">
 			    <div class="row">
-			        <div class="col-sm-6"><button data-role="option-button" data-attribute="2" data-option="2" data-hide="upgrade-old" data-show="upgrade-bullystick">Please Add</button></div>
-				<div class="col-sm-6"><button data-role="option-button" data-attribute="2" data-option="1" data-hide="upgrade-old" data-show="upgrade-bullystick">No Thanks</button></div>
+			        <div class="col-xs-6"><button data-role="option-button" data-attribute="2" data-option="2" data-hide="upgrade-old" data-show="upgrade-bullystick">Please Add</button></div>
+				<div class="col-xs-6"><button data-role="option-button" data-attribute="2" data-option="1" data-hide="upgrade-old" data-show="upgrade-bullystick">No Thanks</button></div>
 			    </div>
 			</div>
 		    </div>
@@ -158,12 +158,12 @@ wp_enqueue_style( 'dhc-custom-css', $plugin->fileUrl( 'css/custom.css' ) );
 			<p>Treat your pup with an extra bully stick.</p>
 			<div class="container">
 			    <div class="row">
-			        <div class="col-sm-6">
+			        <div class="col-xs-6">
 				    <img src="<?php echo $plugin->fileUrl( 'img/dhc-upgrade-bullystick-sm.png' ); ?>" />
 				    <p>Small</p>
 				    <button data-role="option-button" data-attribute="3" data-option="2" data-action="next">add $6.99</button>
 				</div>
-				<div class="col-sm-6">
+				<div class="col-xs-6">
 				    <img src="<?php echo $plugin->fileUrl( 'img/dhc-upgrade-bullystick-md.png' ); ?>" />
 				    <p>Medium/Large</p>
 				    <button data-role="option-button" data-attribute="3" data-option="3" data-action="next">add $9.99</button>
