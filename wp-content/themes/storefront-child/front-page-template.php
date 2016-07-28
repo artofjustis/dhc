@@ -12,7 +12,7 @@ get_header('front-page-template'); ?>
                         <div class="row">
 <!--                            <div class="col-sm-3"></div>-->
                             <div class="col-sm-6">
-                                <a href="#"><i class="fa fa-paw"></i>&nbsp;GET A BOX</a>
+                                <a href="<?php echo site_url(); ?>/product/monthly-dhc-box/"><i class="fa fa-paw"></i>&nbsp;GET A BOX</a>
                             </div>
                             <div class="col-sm-6">
                                 <a href="#"><i class="fa fa-gift"></i>&nbsp;GIFT A BOX</a>
@@ -58,19 +58,15 @@ get_header('front-page-template'); ?>
     </section>
 
     <section id="two">
-        <div class="hero">
+        <div class="hero col-xs-12">
             <div class="inner col-sm-4">
                 <h3>WHAT'S INSIDE</h3>
                 <p>Every month our doggies select their favorite healthy premium treats and toys.
                     Working with small boutique manufacturers, we offer only the highest quality of
                     products not found anywhere else. We guarantee your doggy will love them.</p>
             </div>
-            <div class="inside-box col-sm-4">
+            <div class="inside-box col-sm-8">
                 <img src="<?php echo site_url(); ?>/wp-content/themes/storefront-child/images/deliverydog.png" alt="Delivery Dog">
-            </div>
-            <div class="col-sm-3"></div>
-            <div class="col-sm-1">
-                <a href="contact"><img src="<?php echo site_url(); ?>/wp-content/themes/storefront-child/images/leave-a-message.png" alt="Leave a message" id="leave-a-message"></a>
             </div>
         </div>
     </section>
@@ -120,7 +116,7 @@ get_header('front-page-template'); ?>
                     <div class="container">
                         <div class="row">
                             <div class="col-sm-2">
-                                <a href="#"><i class="fa fa-heart"></i>&nbsp;MORE INFO</a>
+                                <a href="<?php echo get_permalink( get_page_by_path( 'charity' ) ); ?>"><i class="fa fa-heart"></i>&nbsp;MORE INFO</a>
                             </div>
                             <div class="col-sm-2">
                                 <img src="<?php echo site_url(); ?>/wp-content/themes/storefront-child/images/humane-society.png" alt="Humane Society Logo">
@@ -141,7 +137,7 @@ get_header('front-page-template'); ?>
                     <h2>JOIN THE CLUB</h2>
                     <div class="row">
                         <div class="col-sm-6">
-                            <a href="#"><i class="fa fa-paw"></i>&nbsp;GET A BOX</a>
+                            <a href="<?php echo site_url(); ?>/product/monthly-dhc-box/"><i class="fa fa-paw"></i>&nbsp;GET A BOX</a>
                         </div>
                         <div class="col-sm-6">
                             <a href="#"><i class="fa fa-gift"></i>&nbsp;GIFT A BOX</a>

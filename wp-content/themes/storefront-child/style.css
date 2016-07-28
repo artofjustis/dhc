@@ -21,6 +21,15 @@ body, h1, h2, h3, h4, h5, h6 {
     color: #281e1b;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Molot';
+    font-weight: normal;
+}
+
+a:focus, .button:focus, .button.alt:focus, .button.added_to_cart:focus, .button.wc-forward:focus, button:focus, input[type="button"]:focus, input[type="reset"]:focus, input[type="submit"]:focus{
+    outline:none;
+}
+
 .site-content {
     padding-top: 150px;
 }
@@ -155,16 +164,14 @@ body.home #primary.content-area {
 #two,
 #three,
 #four {
-    margin: 4em 0;
+    margin: 3em 0;
 }
 header.major {
     text-align: center;
-    margin: 4em 0 2em;
 }
 .section-heading {
     color: #666f77;
     font-size: 2em;
-    line-height: 2em;
 }
 .box {
     padding: 3em 2em;
@@ -190,12 +197,13 @@ header.major {
 
 #two {
     margin: 0;
-    padding: 80px 0 40px;
+    padding: 80px 0px 0px;
     background: #decba6;
 }
 #two .hero {
     background: #decba6;
     padding: 0;
+    height:auto;
 }
 .inner {
     text-align: left;
@@ -216,11 +224,8 @@ header.major {
     /*position: relative;*/
 }
 .inside-box img {
-    width: 90%;
     display: block;
     margin: 0 auto;
-    position: relative;
-    bottom: -83px;
 }
 #leave-a-message {
     position: absolute;
@@ -229,11 +234,12 @@ header.major {
 }
 
 #three {
-    padding: 200px 0;
+    padding: 75px 0;
     margin: 0;
     background: #281e1b;
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 93%);
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 93%);
+    clear:both;
 }
 #three h2 {
     color: #decba6;
@@ -291,8 +297,8 @@ header.major {
     position: relative;
     background: url('images/dhc-gives-back-bg.png') no-repeat 50% 50%;
     background-size: 100%;
-    height: 600px;
     border-bottom: 16px solid rgb(0,43,17);
+    padding: 20px 0px;
 }
 #five h2 {
     color: rgb(0,43,17);
@@ -320,8 +326,9 @@ header.major {
 }
 
 #six {
-    height: 300px;
+    padding:50px 0px;
 }
+
 #six h2 {
     font-size: 2.5em;
     margin-bottom: .6em;
@@ -357,7 +364,7 @@ header.major {
 /* Footer */
 footer#colophon {
     background: #D1C4AB;
-    padding: 6em 0 2em;
+    padding: 0em 0 2em;
 }
 footer#colophon h4 {
     color: #281e1b;
@@ -424,6 +431,7 @@ footer#colophon [type="submit"] {
     background-repeat: no-repeat;
     background-color: #decba6;
     background-position: center;
+    background-size:cover;
 }
 
 #page-learn .row img {
@@ -442,7 +450,7 @@ footer#colophon [type="submit"] {
     background-repeat: no-repeat;
     background-color: #decba6;
     background-position: center;
-
+    background-size:cover;
 }
 
 /* UI Elements */
@@ -495,6 +503,11 @@ footer#colophon [type="submit"] {
 
 .padSection {
     padding: 50px 0px;
+}
+
+#join-the-club{
+    padding:0px;
+    padding-bottom: 30px;
 }
 
 .dhcImportantText {
@@ -577,7 +590,7 @@ div#shiftnav-toggle-main {
 }
 .woocommerce-billing-fields,
 #billing_info_div {
-    border: 1px solid #281e1b;
+    /*border: 1px solid #281e1b;*/
     padding: 20px;
     border-radius: 10px;
     margin-bottom: 20px;
@@ -680,7 +693,7 @@ div#shiftnav-toggle-main {
     text-transform: uppercase;
     font-weight: bold;
     border-radius: 5px;
-    background: url('/wp-content/themes/storefront-child/images/header-bg.jpg')!important;
+    background: url('images/header-bg.jpg')!important;
 }
 
 .form-row.coupon-form,
@@ -753,6 +766,9 @@ div#shiftnav-toggle-main {
     margin: 0 auto;
 }
 
+.waitMe_container .waitMe{
+    background: rgba(209, 196, 171, 0.701961) !important;
+}
 
 
 @media screen and (max-width: 440px) {
@@ -774,5 +790,14 @@ div#shiftnav-toggle-main {
         display: block;
         width: 80%!important;
         margin: 0 auto;
+    }
+    .padSection{
+        padding:25px 0px;
+    }
+}
+
+@media screen and (min-width:441px){
+    footer#colophon{
+        padding-top:4em;
     }
 }

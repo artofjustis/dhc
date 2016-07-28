@@ -1,7 +1,9 @@
 <?php
 /* Template Name: Learn More Page */
 
-get_header('front-page-template'); ?>
+get_header('front-page-template');
+global $post;
+?>
 
 <div id="page-learn">
 
@@ -22,10 +24,7 @@ get_header('front-page-template'); ?>
 	    <div class="row">
 	        <div class="col-sm-12 text-center">
 		    <p class="dhcImportantText center-block" style="max-width: 620px">
-		       We provide your pups with a monthly box of the highest 
-                       quality natural baked treats and super fun toys. Your pup's 
-		       delivery consists of a delicious variety of ever-changing 
-		       products tailored to his or her size and personality!
+				<?php echo get_post_field('post_content', $post->ID); ?>
 		     </p>
 		</div>
 	    </div>
@@ -159,46 +158,17 @@ get_header('front-page-template'); ?>
 	        <div class="col-sm-12">
 		    <h3 class="text-uppercase">Join the Club</h3>
 		    <div class="center-block dhc-join-wrap">
-		        <button class="dhc-button" style="margin:10px 5px;"><i class="icon-paw"></i> Get A Box</button> <button class="dhc-button" style="margin:10px 5px;"><i class="icon-gift"></i> Gift A Box</button>
+				<a href="<?php echo site_url(); ?>/product/monthly-dhc-box/"><button class="dhc-button" style="margin:10px 5px;"><i class="icon-paw"></i> Get A Box</button></a> <button class="dhc-button" style="margin:10px 5px;"><i class="icon-gift"></i> Gift A Box</button>
 		    </div>
 		</div>
 	    </div>
 	</div>
     </section>
 
-    <div class="container">
-        <div class="border-dots"></div>
-    </div>
-    
+	<div class="border-dots"></div>
  </div>
     
    <!-- end custom content -->
-
-    <!-- Default Storefront Content -->
-
-  <div class="container">
-    <div id="primary">
-        <main id="main" class="site-main" role="main">
-
-            <?php while ( have_posts() ) : the_post();
-
-                do_action( 'storefront_page_before' );
-
-                get_template_part( 'content', 'page' );
-
-                /**
-                 * Functions hooked in to storefront_page_after action
-                 *
-                 * @hooked storefront_display_comments - 10
-                 */
-                do_action( 'storefront_page_after' );
-
-            endwhile; // End of the loop. ?>
-
-        </main><!-- #main -->
-    </div><!-- #primary -->
-  </div>
-
 <?php
 get_footer();
 ?>

@@ -3,8 +3,8 @@
 function my_theme_enqueue_styles() {
 
     $parent_style = 'parent-style';
-
     wp_enqueue_style( $parent_style, get_template_directory_uri() . '/style.css' );
+    wp_enqueue_style( 'custom-fonts', get_stylesheet_directory_uri() . '/assets/css/fonts.css' );
 
 }
 add_action( 'wp_enqueue_scripts', 'my_theme_enqueue_styles' );
@@ -187,13 +187,13 @@ function order_fields($fields) {
 // Add image to top of order review (inside)
 add_action('woocommerce_checkout_order_review', 'add_order_review_image', 1);
 function add_order_review_image(){
-    echo "<img src='/wp-content/themes/storefront-child/images/doggy-box-checkout.jpg'>";
+    echo "<img src='".site_url()."/wp-content/themes/storefront-child/images/doggy-box-checkout.jpg'>";
 }
 
 // Add guarantee logo after order review (outside)
 add_action('woocommerce_checkout_after_order_review', 'add_after_order_review_image', 1);
 function add_after_order_review_image(){
-    echo "<img id='img_after_order_review' src='/wp-content/themes/storefront-child/images/satisfaction-guaranteed.png'>";
+    echo "<img id='img_after_order_review' src='".site_url()."/wp-content/themes/storefront-child/images/satisfaction-guaranteed.png'>";
     echo "<p id='text_after_order_review'>Our policy replaces any item<br>your dog doesn't love,<br>We guarantee it!</p>";
 }
 

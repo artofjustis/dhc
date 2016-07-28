@@ -1,7 +1,9 @@
 <?php
 /* Template Name: Charity Page */
 
-get_header('front-page-template'); ?>
+get_header('front-page-template');
+global $post;
+?>
 
 <div id="page-charity">
 
@@ -26,45 +28,27 @@ get_header('front-page-template'); ?>
 		<div class="col-md-6">
 		    <h3 class="text-uppercase">About The Humane Society</h3>
 		    <p>
-		       The Human Society of USA is and organization that aims to 
-		       protect all animals.  Their most important goal is to 
-		       prevent animals from getting into situations of distress 
-		       in the first place. They confront the largest national and 
-		       international problems facing animals, which local shelters 
-		       don't have the reach or the resources to take on.
-
-                       With each Doggy Health Club Box purchase, a portion of the 
-		       proceeds goes toward our donations.  With every donation, we 
-		       are investing in the HSUS lifesaving animal protection 
-		       programs, contributing to the financial foundation that 
-		       enables HSUS to mobilize quickly so in efforts to rescue 
-		       animals from dire situations like puppy mills, animal 
-		       fighting rings and disasters when needed.
-
-                       For more information about HUSU click here.
+		       <?php echo get_post_field('post_content', $post->ID); ?>
 		    </p>
 		</div>
 	    </div>
 	</div>
     </section>
     
-    <section class="padSection">
+    <section class="padSection" id="join-the-club">
         <div class="container">
 	    <div class="row text-center">
 	        <div class="col-sm-12">
 		    <h3 class="text-uppercase">Join the Club</h3>
 		    <div class="center-block dhc-join-wrap">
-		        <button class="dhc-button" style="margin:10px 5px;"><i class="icon-paw"></i> Get A Box</button> <button class="dhc-button" style="margin:10px 5px;"><i class="icon-gift"></i> Gift A Box</button>
+                <a href="<?php echo site_url(); ?>/product/monthly-dhc-box/"><button class="dhc-button" style="margin:10px 5px;"><i class="icon-paw"></i> Get A Box</button></a> <button class="dhc-button" style="margin:10px 5px;"><i class="icon-gift"></i> Gift A Box</button>
 		    </div>
 		</div>
 	    </div>
 	</div>
     </section>
 
-    <div class="container">
-        <div class="border-dots"></div>
-    </div>
-    
+    <div class="border-dots"></div>
  </div>
     
    <!-- end custom content -->
@@ -78,7 +62,7 @@ get_header('front-page-template'); ?>
 
                 do_action( 'storefront_page_before' );
 
-                get_template_part( 'content', 'page' );
+                //get_template_part( 'content', 'page' );
 
                 /**
                  * Functions hooked in to storefront_page_after action
