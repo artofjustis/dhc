@@ -12,9 +12,10 @@
  * @since Twenty Eleven 1.0
  */
 
-get_header(); ?>
 
-    <div id="primary">
+get_header('front-page-template'); ?>
+
+    <div id="primary" class="products-page">
         <div id="content-fullwidth" role="main">
 
             <?php woocommerce_content(); ?>

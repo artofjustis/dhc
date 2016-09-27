@@ -35,11 +35,9 @@ if ( $order ) : ?>
 
 	<?php else : ?>
 		<div id="thank_you_page_container">
-			<img id="thank_you_image" src="/wp-content/themes/storefront-child/images/doggy_stamp.png">
-			<p class="woocommerce-thankyou-order-received"><?php echo apply_filters( 'woocommerce_thankyou_order_received_text', __( 'WELCOME TO THE CLUB!', 'woocommerce' ), $order ); ?></p>
-
-	<!--		<ul class="woocommerce-thankyou-order-details order_details">-->
-			<ul class="">
+			<img id="thank_you_image" src="<?php echo get_stylesheet_directory_uri(); ?>/images/thank-you-header.png">
+			<h2 class="woocommerce-thankyou-order-received"><?php echo apply_filters( 'woocommerce_thankyou_order_received_text', __( 'WELCOME TO THE CLUB!', 'woocommerce' ), $order ); ?></h2>
+			<ul>
 				<li class="order">
 					<?php _e( 'Order ', 'woocommerce' ); ?>
 					<strong>#<?php echo $order->get_order_number(); ?></strong>

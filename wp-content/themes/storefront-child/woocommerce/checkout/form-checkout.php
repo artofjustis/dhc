@@ -45,14 +45,26 @@ if ( ! $checkout->enable_signup && ! $checkout->enable_guest_checkout && ! is_us
                 <?php do_action( 'woocommerce_checkout_billing' ); ?>
             </div>
 
-            <div style="display:none;" class="col-2">
-                <?php do_action( 'woocommerce_checkout_shipping' ); ?>
+            <div class="col-2">
+                <?php 
+                global $woocommerce;
+                    $items = $woocommerce->cart->get_cart();
+                    $f_index=key($items);
+                 $product_id_mine=$items[$f_index]['product_id'];
+                
+                 if($product_id_mine=='557'){ do_action( 'woocommerce_checkout_shipping' ); }
+                
+                ?>
             </div>
 <!--            <div class="form-row place-order">-->
 <!--                <noscript>Since your browser does not support JavaScript, or it is disabled, please ensure you click the &amp;lt;em&amp;gt;Update Totals&amp;lt;/em&amp;gt; button before placing your order. You may be charged more than the amount stated above if you fail to do so.&amp;lt;br/&amp;gt;&amp;lt;input type="submit" class="button alt" name="woocommerce_checkout_update_totals" value="Update totals" /&amp;gt;</noscript>-->
 <!--                <input type="hidden" id="_wpnonce" name="_wpnonce" value="c82a4af261"><input type="hidden" name="_wp_http_referer" value="/woocommerce2/wp-admin/admin-ajax.php">-->
 <!--                <input type="submit" class="button alt" name="woocommerce_checkout_place_order" id="place_order" value="Buy Now" data-value="Place order">-->
 <!--            </div>-->
+<div class="form-row place-order">
+<?php echo apply_filters( 'woocommerce_order_button_html', '<input type="submit" class="button alt" name="woocommerce_checkout_place_order" id="place_order" value="Buy Now" />' ); ?>
+</div>
+		
         </div>
 
         <?php do_action( 'woocommerce_checkout_after_customer_details' ); ?>
@@ -77,5 +89,32 @@ if ( ! $checkout->enable_signup && ! $checkout->enable_guest_checkout && ! is_us
     </div>
 
 </form>
-
+<?php 
+ session_start();
+//echo "<pre>"; print_r($_SESSION['rec_arr_data']);
+//die("here");
+    $rec_first_name = $_SESSION['rec_arr_data']['rec_first_name'];
+    $rec_last_name  = $_SESSION['rec_arr_data']['rec_last_name'];
+    $rec_dog_name   = $_SESSION['rec_arr_data']['rec_dog_name'];
+    $rec_birth      = $_SESSION['rec_arr_data']['rec_birth'];
+    $rec_street     = $_SESSION['rec_arr_data']['rec_street'];
+    $rec_apt        = $_SESSION['rec_arr_data']['rec_apt'];
+    $rec_city       = $_SESSION['rec_arr_data']['rec_city'];
+    $rec_state      = $_SESSION['rec_arr_data']['rec_state'];
+    $rec_zip        = $_SESSION['rec_arr_data']['rec_zip'];
+//session_unset();
+?>
+<script type="text/javascript">
+    jQuery("document").ready(function(){
+        jQuery("#shipping_first_name").val('<?php echo $rec_first_name; ?>');
+        jQuery("#shipping_last_name").val('<?php echo $rec_last_name; ?>');
+        jQuery("#shipping_address_1").val('<?php echo $rec_street; ?>');
+        jQuery("#shipping_address_2").val('<?php echo $rec_apt; ?>');
+        jQuery("#shipping_doggy_name").val('<?php echo $rec_dog_name; ?>');
+        jQuery("#shipping_doggy_birthday").val('<?php echo $rec_birth; ?>');
+        jQuery("#shipping_city").val('<?php echo $rec_city; ?>');
+        jQuery("#shipping_postcode").val('<?php echo $rec_zip; ?>');
+        jQuery("#shipping_state").val(jQuery("#shipping_state").find("option:contains(<?php echo $rec_state; ?>)").attr("value"));
+    });
+</script>
 <?php do_action( 'woocommerce_after_checkout_form', $checkout ); ?>

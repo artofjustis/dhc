@@ -73,8 +73,15 @@ class Settings
 
 		add_settings_field(
 		    'box-product',
-		    'Box Product ID',
+		    'Get a Box Product ID',
 		    array( $this, 'boxProductField' ),
+		    'dhc_settings_page',
+		    'main-settings'       
+		);
+		add_settings_field(
+		    'box-product2',
+		    'Gift a Box Product ID',
+		    array( $this, 'boxProductField2' ),
 		    'dhc_settings_page',
 		    'main-settings'       
 		);
@@ -113,6 +120,13 @@ class Settings
 		printf(
 		    '<input type="text" id="box_product" name="dhc_settings[box_product]" value="%s" />',
 		    $this->getSetting( 'box_product' ) !== NULL ? esc_attr( $this->getSetting( 'box_product' ) ) : ''
+		);
+	}
+	public function boxProductField2()
+	{
+		printf(
+		    '<input type="text" id="box_product2" name="dhc_settings[box_product2]" value="%s" />',
+		    $this->getSetting( 'box_product2' ) !== NULL ? esc_attr( $this->getSetting( 'box_product2' ) ) : ''
 		);
 	}
 }

@@ -31,160 +31,139 @@ wp_enqueue_style( 'dhc-custom-css', $plugin->fileUrl( 'css/custom.css' ) );
 ?>
 
 <div itemscope itemtype="<?php echo woocommerce_get_product_schema(); ?>" id="product-<?php the_ID(); ?>" <?php post_class(); ?>>
-
     <div id="dhc-wizard-container" class="dhc-wizard" style="visibility:hidden">
-    
+    	
         <h3>Size</h3>
+        <div class="border-dots"></div>
         <section>
-	    <div class="container option-group">
-	        <div class="row">
-		    <div class="col-md-4">
+	    <div class="option-group">
+        	<div class="container clearfix">
+        	<h4 class="text-center">Select dog's Size</h4>
+	        <div class="row member-ship-box clearfix">
+		    <div class="col-md-4 text-center">
 		        <img 
 			  data-attribute="0" data-option="1" data-action="next" data-role="option-button"
 			  class="img-responsive img-circle img-option-button" 
 			  src="<?php echo $plugin->fileUrl( 'img/dhc-box-size-small.png' ); ?>" 
 			  />
 		    </div>
-		    <div class="col-md-4">
+		    <div class="col-md-4 text-center">
 		        <img 
 			  data-attribute="0" data-option="2" data-action="next" data-role="option-button"
-			  class="img-responsive img-circle img-option-button" 
+			  class="img-circle img-option-button" 
 			  src="<?php echo $plugin->fileUrl( 'img/dhc-box-size-medium.png' ); ?>" 
 			  />
 		    </div>
-		    <div class="col-md-4">
+		    <div class="col-md-4 text-center">
 		        <img 
 			  data-attribute="0" data-option="3" data-action="next" data-role="option-button"
-			  class="img-responsive img-circle img-option-button" 
+			  class="img-circle img-option-button" 
 			  src="<?php echo $plugin->fileUrl( 'img/dhc-box-size-large.png' ); ?>" 
 			  />
 		    </div>
 		</div>
+        <p class="text-center">Plans automatically renew. You may cancel at any time. Sales tax applies to AZ, CT, NV, NY and OH.</p>
 	    </div>
+        </div>
         </section>
         <h3>Personality</h3>
         <section>
-	    <div class="container option-group">
-	        <div class="row">
-		    <div class="col-md-4">
+	    <div class="option-group">
+        	<div class="container clearfix">
+        	<h4 class="text-center">Describe your dog's Personality</h4>
+	        <div class="row member-ship-box clearfix">
+		    <div class="col-md-4 text-center">
 		        <img 
 			  data-attribute="1" data-option="1" data-action="next" data-role="option-button"
-			  data-hide="upgrade-wild,upgrade-old,upgrade-bullystick" data-show="upgrade-calm"
-			  class="img-responsive img-circle img-option-button" 
+			  data-hide="" data-show="upgrade-calm"
+			  class="img-circle img-option-button" 
 			  src="<?php echo $plugin->fileUrl( 'img/dhc-box-personality-cool.png' ); ?>" 
 			  />
+              <p class="text-center">Does your pup prefer to lounge? This box offers low fat organic treats and chews that easily digest. This means your pup can enjoy all the good stuff without watching his or her figure! </p>
 		    </div>
-		    <div class="col-md-4">
+		    <div class="col-md-4 text-center">
 		        <img 
 			  data-attribute="1" data-option="2" data-action="next" data-role="option-button"
-			  data-hide="upgrade-calm,upgrade-old,upgrade-bullystick" data-show="upgrade-wild"
-			  class="img-responsive img-circle img-option-button" 
+			  data-hide="" data-show="upgrade-wild"
+			  class="img-circle img-option-button" 
 			  src="<?php echo $plugin->fileUrl( 'img/dhc-box-personality-wild.png' ); ?>" 
 			  />
+              <p class="text-center">Is your pup always on the go? This box offers our little carnivores  a high-protein diet for increased energy and recovery. Now your pup can really become a true athlete. </p>
 		    </div>
-		    <div class="col-md-4">
+		    <div class="col-md-4 text-center">
 		        <img 
 			  data-attribute="1" data-option="3" data-action="next" data-role="option-button"
-			  data-hide="upgrade-calm,upgrade-wild,upgrade-bullystick" data-show="upgrade-old"
-			  class="img-responsive img-circle img-option-button" 
+			  data-hide="" data-show="upgrade-old"
+			  class="img-circle img-option-button" 
 			  src="<?php echo $plugin->fileUrl( 'img/dhc-box-personality-mellow.png' ); ?>" 
 			  />
+              <p class="text-center">Has your pup matured into a wise senior? This box offers our aging fur children goodies that benefit bones, joints, and teeth. Let your dog be a pup again.  </p>
 		    </div>
+            </div>
 		</div>
 	    </div>
         </section>
-        <h3>Upgrades</h3>
+
+        <h3>Membership</h3>
         <section>
-	    <div class="option-group">
-              <div class="container" id="upgrade-calm">
-	        <div class="row">
-		    <div class="col-md-6 upgrade-image">
-		        <img src="<?php echo $plugin->fileUrl( 'img/dhc-upgrade-calm.png' ); ?>" />
-		    </div>
-		    <div class="col-md-6 upgrade-box">
-	                <h4>Have a lazy pup?</h4>
-			<p>Keep 'em moving with an extra, premium toy in each month's box for just $7.99</p>
-			<div class="container">
-			    <div class="row">
-			        <div class="col-xs-6"><button data-role="option-button" data-attribute="2" data-option="2" data-hide="upgrade-calm" data-show="upgrade-bullystick">Please Add</button></div>
-				<div class="col-xs-6"><button data-role="option-button" data-attribute="2" data-option="1" data-hide="upgrade-calm" data-show="upgrade-bullystick">No Thanks</button></div>
-			    </div>
-			</div>
-		    </div>
-		</div>
-	      </div>
-              <div class="container" id="upgrade-wild">
-	        <div class="row">
-		    <div class="col-md-6 upgrade-image">
-		        <img src="<?php echo $plugin->fileUrl( 'img/dhc-upgrade-wild.png' ); ?>" />
-		    </div>
-		    <div class="col-md-6 upgrade-box">
-	                <h4>Have a wild pup?</h4>
-			<p>Keep 'em playing with an extra, premium toy in each month's box for just $7.99</p>
-			<div class="container">
-			    <div class="row">
-			        <div class="col-xs-6"><button data-role="option-button" data-attribute="2" data-option="2" data-hide="upgrade-wild" data-show="upgrade-bullystick">Please Add</button></div>
-				<div class="col-xs-6"><button data-role="option-button" data-attribute="2" data-option="1" data-hide="upgrade-wild" data-show="upgrade-bullystick">No Thanks</button></div>
-			    </div>
-			</div>
-		    </div>
-		</div>
-	      </div>
-              <div class="container" id="upgrade-old">
-	        <div class="row">
-		    <div class="col-md-6 upgrade-image">
-		        <img src="<?php echo $plugin->fileUrl( 'img/dhc-upgrade-old.png' ); ?>" />
-		    </div>
-		    <div class="col-md-6 upgrade-box">
-	                <h4>Have a wise senior pup?</h4>
-			<p>Keep 'em playing like a puppy with an extra, premium toy in each month's box for just $7.99</p>
-			<div class="container">
-			    <div class="row">
-			        <div class="col-xs-6"><button data-role="option-button" data-attribute="2" data-option="2" data-hide="upgrade-old" data-show="upgrade-bullystick">Please Add</button></div>
-				<div class="col-xs-6"><button data-role="option-button" data-attribute="2" data-option="1" data-hide="upgrade-old" data-show="upgrade-bullystick">No Thanks</button></div>
-			    </div>
-			</div>
-		    </div>
-		</div>
-	      </div>
-	    </div>
-            <div class="container option-group" id="upgrade-bullystick">
-	        <div class="row">
-		    <div class="col-md-6 upgrade-image">
-		        <img src="<?php echo $plugin->fileUrl( 'img/dhc-upgrade-bullystick.png' ); ?>" />
-		    </div>
-		    <div class="col-md-6 upgrade-box">
-	                <h4>Who's a good doggy?</h4>
-			<p>Treat your pup with an extra bully stick.</p>
-			<div class="container">
-			    <div class="row">
-			        <div class="col-xs-6">
-				    <img src="<?php echo $plugin->fileUrl( 'img/dhc-upgrade-bullystick-sm.png' ); ?>" />
-				    <p>Small</p>
-				    <button data-role="option-button" data-attribute="3" data-option="2" data-action="next">add $6.99</button>
-				</div>
-				<div class="col-xs-6">
-				    <img src="<?php echo $plugin->fileUrl( 'img/dhc-upgrade-bullystick-md.png' ); ?>" />
-				    <p>Medium/Large</p>
-				    <button data-role="option-button" data-attribute="3" data-option="3" data-action="next">add $9.99</button>
-				</div>
-			    </div>
-			    <div class="row">
-			        <div class="col-sm-12">
-				    <hr>
-				    <button data-role="option-button" data-attribute="3" data-option="1" data-action="next">No Thanks</button>
-				</div>
-			    </div>
-			</div>
-		    </div>
-		</div>
-	    </div>
+            <div class="option-group">
+            	<div class="container clearfix">
+                <div id="upgrade-calm">
+                    <div class="upgrade-box clearfix">
+                        <h4 class="text-center">Choose Your Membership</h4>
+                        <div class="member-ship-box clearfix">
+                            <div class="col-md-4 clearfix">
+                                <div class="box-member clearfix" data-attribute="2" data-option="1" data-action="next" data-role="option-button"
+                                      data-hide="" data-show="">
+                                    <h3 class="text-uppercase">Basic</h3>
+                                    <img class="img-responsive img-circle" 
+                                      src="<?php echo $plugin->fileUrl( 'img/pak-basic.jpg' ); ?>" 
+                                      />
+                                      <button class="green-btn">$32 MO</button>
+                                      <p>3 Bags of Treats</p>
+                                      <p>1 Premium Toy</p>
+                                      <p>1 Chewy</p>
+                                </div>
+                              
+                            </div>
+                            <div class="col-md-4">
+                                <div class="box-member clearfix"  data-attribute="2" data-option="2" data-action="next" data-role="option-button"
+                              data-hide="" data-show="" >
+                                    <h3 class="text-uppercase">Gold</h3>
+                                    <img class="img-responsive img-circle" 
+                              src="<?php echo $plugin->fileUrl( 'img/pak-gold.jpg' ); ?>" 
+                              />
+                                      <button class="green-btn">Add $5</button>
+                                      <p>Extra Premium Toy </p>
+                                </div>
+                              
+                            </div>
+                            <div class="col-md-4">
+                                <div class="box-member clearfix" data-attribute="2" data-option="3" data-action="next" data-role="option-button"
+                              data-hide="" data-show="" >
+                                    <h3 class="text-uppercase">Platnium</h3>
+                                    <img class="img-responsive img-circle" 
+                              src="<?php echo $plugin->fileUrl( 'img/pak-platinium.jpg' ); ?>" 
+                              />
+                                      <button class="green-btn" data-attribute="2" data-option="3" data-action="next" data-role="option-button"
+                              data-hide="" data-show="" >Add $10</button>
+                                      <p>Extra Premium Toy plus a Bully Stick</p>
+                                </div>
+                              
+                            </div>
+                            </div>
+                        
+                    </div>
+                </div>
+                </div>
+            </div>
         </section>
+
 	<h3>Checkout</h3>
 	<section>
-	   <div class="container">
+	   <div class="container clearfix">
 	        <div class="row">
-	            <div class="col-sm-12" style="text-align:center">
+	            <div class="col-sm-12 option-group" style="text-align:center">
 		        <h4>You're good to go!</h4>
 			<p>Click the button to checkout.</p>
 			<button data-role="option-button" data-action="submit">Checkout</button>
@@ -192,8 +171,7 @@ wp_enqueue_style( 'dhc-custom-css', $plugin->fileUrl( 'css/custom.css' ) );
 	        </div>
 	    </div>
 	</section>
-	
-    </div>
+	</div>
 
 	<?php
 		/**
@@ -205,7 +183,7 @@ wp_enqueue_style( 'dhc-custom-css', $plugin->fileUrl( 'css/custom.css' ) );
 		//do_action( 'woocommerce_before_single_product_summary' );
 	?>
 
-	<div style="display:none" class="summary entry-summary product-form-container">
+	<div style="display:none;" class="summary entry-summary product-form-container">
 		<?php
 			/**
 			 * woocommerce_single_product_summary hook.
@@ -239,3 +217,4 @@ wp_enqueue_style( 'dhc-custom-css', $plugin->fileUrl( 'css/custom.css' ) );
 </div><!-- #product-<?php the_ID(); ?> -->
 
 <?php do_action( 'woocommerce_after_single_product' ); ?>
+

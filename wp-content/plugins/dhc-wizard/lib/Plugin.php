@@ -78,6 +78,7 @@ class Plugin
 	{
 		wp_register_script( 'jquery-steps', $this->fileUrl( 'js/jquery.steps.min.js' ), array( 'jquery' ), false, true );
 		wp_register_script( 'jquery-wait', $this->fileUrl( 'js/jquery.wait.min.js' ), array( 'jquery' ), false, true );
+		wp_register_script( 'flip-plugin', $this->fileUrl( 'js/flip.js' ), array( 'jquery' ), false, true );
 		wp_register_script( 'dhc-plugin', $this->fileUrl( 'js/plugin.js' ), array( 'jquery' ), false, true );
 		wp_localize_script( 'dhc-plugin', 'dhclocal', $this->localData() );
 	}
@@ -110,6 +111,10 @@ class Plugin
 			if ( $post->ID == $this->getSettings()->getSetting( 'box_product' ) )
 			{
 				return $this->pluginFile( 'template/product', 'php' );
+			}
+			if ( $post->ID == $this->getSettings()->getSetting( 'box_product2' ) )
+			{
+				return $this->pluginFile( 'template/product2', 'php' );
 			}
 		}
 		
